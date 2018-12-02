@@ -1,0 +1,280 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.slc.android.sceneliner.app.SLPlayerActivity"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#28AF95"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerScreenVideoLayout"
+        android:layout_gravity="center_horizontal">
+
+        <SurfaceView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/playerScreenSurfaceView"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="#28af95"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/leftArrowButton"
+            android:src="@drawable/left_arrow" />
+            <!--android:src="@drawable/left_arrow"-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1/1"
+            android:id="@+id/feedNumView"
+            android:layout_centerHorizontal="true"
+            android:textSize="25dp"
+            android:textColor="#ff641f"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/rightArrowButton"
+            android:src="@drawable/right_arrow" />
+            <!--android:src="@drawable/right_arrow"-->
+        />
+    </LinearLayout>
+
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Baja Sharkeez"
+                android:id="@+id/titleView"
+                android:layout_centerHorizontal="true"
+                android:textSize="25dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerScreenBusinessTypeLabel"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="Type"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Business Info"
+                android:id="@+id/playerScreenBusinessInfoTitleLabel"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1234 Balboa Blvd\nNewport Beach, CA. 85585"
+                android:id="@+id/addressView"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="(853)234-1234"
+                android:id="@+id/phoneNumberView"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/playerScreenCallButton"
+                    android:text="Call"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/playerScreenMapButton"
+                    android:text="Map"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deals"
+                android:id="@+id/playerScreenBusinessDealsLabel"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+           <!-- <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/contentListView"
+                android:transitionGroup="false"
+                android:clickable="false"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deal1"
+                android:id="@+id/playerScreenSpecial1Label"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deal2"
+                android:id="@+id/playerScreenSpecial2Label"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+           <!-- <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deal3"
+                android:id="@+id/playerScreenSpecial3Label"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deal4"
+                android:id="@+id/playerScreenSpecial4Label"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

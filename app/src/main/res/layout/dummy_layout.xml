@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/resetPasswordLayout"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+android:background="#d3d3d3"
+android:gravity="top"
+android:clickable="true">
+
+
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:text="Fill out your business' bulleting below and tap save."
+    android:textColor="@android:color/black"
+    android:layout_marginTop="50dp"/>
+
+<EditText
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:id="@+id/special1EditText"
+    android:hint="Special 1"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:background="@drawable/rounded_edittext"
+    android:layout_marginTop="20dp"/>
+
+<EditText
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:id="@+id/special2EditText"
+    android:hint="Special 2"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:background="@drawable/rounded_edittext"
+    android:layout_marginTop="20dp"/>
+
+<EditText
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:id="@+id/special3EditText"
+    android:hint="Special 3"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:background="@drawable/rounded_edittext"
+    android:layout_marginTop="20dp"/>
+
+<EditText
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:id="@+id/special4EditText"
+    android:hint="Special 4"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:background="@drawable/rounded_edittext"
+    android:layout_marginTop="20dp"/>
+
+<Button
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/saveSpecialsButton"
+    android:text="Save"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:textColor="@android:color/white"
+    android:background="#007C64"
+    android:layout_marginTop="20dp"/>
+
+</LinearLayout>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:id="@+id/settingsActivityLayout"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/settingsToolbar"
+        android:background="#28AF95"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--        <TextView
+                    android:id="@+id/mainActivityToolBarLabel"
+                    android:text="Regions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" />-->
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/settingsFlipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#d3d3d3">
+
+
+        <!-- *************Main Settings Screen*******************-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/mainSettingsLayout"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:background="#d3d3d3"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/accountSettingsLabel"
+                android:text="ACCOUNT SETTINGS"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="#c0c0c0"
+                android:id="@+id/loggedInAsLabel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logged in as:"
+                    android:textSize="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/currentLoggedInUserLabel"
+                    android:text="user"
+                    android:textSize="20dp"
+
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="#c0c0c0"
+                android:orientation="horizontal"
+                android:layout_marginBottom="60dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset Password"
+                    android:textSize="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/resetPasswordButton"
+                    android:src="@drawable/right_arrow"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="160dp"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/businessSettingsLabel"
+                android:text="BUSINESS SETTINGS"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="#c0c0c0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Business Bulletin"
+                    android:textSize="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/editBulletinButton"
+                    android:src="@drawable/right_arrow"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="110dp"/>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="#c0c0c0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video Stream Active"
+                    android:textSize="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center" />
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/videoStreamActiveSwitch"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="100dp"
+                    android:enabled="true"
+                    android:checked="true"
+                    android:background="#28AF95"
+                    android:shadowColor="@android:color/transparent"
+                    android:showText="true"
+                    android:textColor="@android:color/white" />
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="#c0c0c0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Business Profile"
+                    android:textSize="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/viewProfileArrow"
+                    android:src="@drawable/right_arrow"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="110dp"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- *************Reset Password Screen*******************-->
+        <LinearLayout
+            android:id="@+id/resetPasswordLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="#d3d3d3"
+            android:gravity="top"
+            android:clickable="true">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="Please Confirm your email below and we will send you instructions on how to reset your password"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="50dp"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:id="@+id/resetPasswordEmailField"
+                android:hint="E-Mail"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/resetPasswordSendEmailButton"
+                android:text="Reset Password"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:textColor="@android:color/white"
+                android:background="#007C64"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+
+        <!-- *************Change Bulletin Specials Screen*******************-->
+        <LinearLayout
+            android:id="@+id/editBulletinLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="#d3d3d3"
+            android:gravity="top"
+            android:clickable="true">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="Fill out your business' bulleting below and tap save."
+                android:textColor="@android:color/black"
+                android:layout_marginTop="50dp"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/special1EditText"
+                android:hint="Special 1"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/special2EditText"
+                android:hint="Special 2"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/special3EditText"
+                android:hint="Special 3"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/special4EditText"
+                android:hint="Special 4"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveSpecialsButton"
+                android:text="Save"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:textColor="@android:color/white"
+                android:background="#007C64"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+    </ViewFlipper>
+
+</LinearLayout>
